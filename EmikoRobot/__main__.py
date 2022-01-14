@@ -82,7 +82,7 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 *Hello {} !*
-✪ I'm an anime-theme management bot [✨](https://telegra.ph/file/11b5922a33de9968cedfe.jpg)
+✪ I'm an SYN management bot [✨](https://telegra.ph/file/11b5922a33de9968cedfe.jpg)
 ────────────────────────
 × *Uptime:* `{}`
 × `{}` *users, across* `{}` *chats.*
@@ -102,7 +102,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-            text="➗ Add Emiko To Your Group ➗", url="t.me/EmiexRobot?startgroup=new"),
+            text="➗ Add Syn To Your Group ➗", url="t.me/synxrobot?startgroup=new"),
     ],
 ]
 
@@ -113,7 +113,7 @@ Click on the button bellow to get description about specifics command."""
 EMI_IMG = "https://telegra.ph/file/5ff1cb39902809148f07f.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project by contacting @excrybaby \
+ You can support the project by contacting @shshtst \
  Supporting isnt always financial! \
  Those who cannot provide monetary support are welcome to help us develop the bot at ."""
 
@@ -360,7 +360,7 @@ def emiko_about_callback(update, context):
     query = update.callback_query
     if query.data == "emiko_":
         query.message.edit_text(
-            text="๏ I'm *Emiko*, a powerful group management bot built to help you manage your group easily."
+            text="๏ I'm *Syn*, a powerful group management bot built to help you manage your group easily."
             "\n• I can restrict users."
             "\n• I can greet users with customizable welcome messages and even set a group's rules."
             "\n• I have an advanced anti-flood system."
@@ -374,12 +374,12 @@ def emiko_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Admins", callback_data="emiko_admin"),
-                    InlineKeyboardButton(text="Notes", callback_data="emiko_notes"),
+                    InlineKeyboardButton(text="Admins", callback_data="syn_admin"),
+                    InlineKeyboardButton(text="Notes", callback_data="syn_notes"),
                  ],
                  [
-                    InlineKeyboardButton(text="Support", callback_data="emiko_support"),
-                    InlineKeyboardButton(text="Credits", callback_data="emiko_credit"),
+                    InlineKeyboardButton(text="Support", callback_data="syn_support"),
+                    InlineKeyboardButton(text="Credits", callback_data="syn_credit"),
                  ],
                  [
                     InlineKeyboardButton(text="Source Code", url="https://github.com/kennedy-ex/EmikoRobot"),
@@ -405,10 +405,10 @@ def emiko_about_callback(update, context):
                 disable_web_page_preview=False,
         )
 
-    elif query.data == "emiko_admin":
+    elif query.data == "syn_admin":
         query.message.edit_text(
             text=f"*๏ Let's make your group bit effective now*"
-            "\nCongragulations, EmikoRobot now ready to manage your group."
+            "\nCongragulations, SynRobot now ready to manage your group."
             "\n\n*Admin Tools*"
             "\nBasic Admin tools help you to protect and powerup your group."
             "\nYou can ban members, Kick members, Promote someone as admin through commands of bot."
@@ -435,14 +435,14 @@ def emiko_about_callback(update, context):
         )
     elif query.data == "emiko_support":
         query.message.edit_text(
-            text="*๏ Emiko support chats*"
-            "\nJoin My Support Group/Channel for see or report a problem on Emiko.",
+            text="*๏ Syn support chats*"
+            "\nJoin My Support Group/Channel for see or report a problem on SynRobot.",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Support", url="t.me/emikosupport"),
-                    InlineKeyboardButton(text="Updates", url="https://t.me/KennedyProject"),
+                    InlineKeyboardButton(text="Support", url="t.me/revengenih"),
+                    InlineKeyboardButton(text="Updates", url="https://t.me/kutipangabutku"),
                  ],
                  [
                     InlineKeyboardButton(text="Go Back", callback_data="emiko_"),
